@@ -7,6 +7,9 @@
 package javafxbasics;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
@@ -16,8 +19,16 @@ import javafx.stage.Stage;
 public class Exercise14_16 extends Application {
 
   @Override
-  public void start(Stage primaryStage) throws Exception {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  public void start(Stage primaryStage){
+      primaryStage.setTitle("Exercise14_16");
+      
+      GridPane grid = new GridPane();
+      grid.setAlignment(Pos.CENTER);
+      grid.setPadding(new Insets(10,10,10,10));
+      grid.setVgap(10);
+      grid.setHgap(10);
+      
+      
   }
 
 }
