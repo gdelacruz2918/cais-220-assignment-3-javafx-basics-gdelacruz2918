@@ -30,7 +30,7 @@ public class Exercise14_2 extends Application {
     //int R = (int)Math.random()*8;
     
     GridPane grid = new GridPane();
-    //grid.setAlignment(Pos.CENTER);
+    grid.setAlignment(Pos.CENTER);
     grid.setPadding(new Insets (10,10,10,10));
     grid.setVgap(8);
     grid.setHgap(8);
@@ -42,22 +42,22 @@ public class Exercise14_2 extends Application {
     Image image2 = new Image("images/o.gif");
     
     ImageView display1 = new ImageView(image1);
-    display1.xProperty().bind(grid.widthProperty());
-    
-    
-    int x = aleatorio.nextInt((int)grid.getWidth());
-    int y = aleatorio.nextInt((int) grid.getHeight());
+    int x = aleatorio.nextInt((int)scene.getWidth());
+    int y = aleatorio.nextInt((int) scene.getHeight());
+    display1.xProperty().bind(scene.widthProperty());
+    display1.yProperty().bind(scene.heightProperty()); 
     GridPane.setConstraints(display1, x, y);
-//    display1.setX(Math.random()*8);
-//    display1.setY(Math.random()*8);
-    int x2 = aleatorio.nextInt((int)grid.getWidth());
-    int y2 = aleatorio.nextInt((int) grid.getHeight());   
+    
     ImageView display2 = new ImageView(image2);
+    int x2 = aleatorio.nextInt((int)grid.getWidth());
+    int y2 = aleatorio.nextInt((int) grid.getHeight()); 
+    display2.xProperty().bind(scene.widthProperty());
+    display2.yProperty().bind(scene.heightProperty()); 
     GridPane.setConstraints(display2, x2, y2);
    
+   
     grid.getChildren().addAll(display1, display2);
-    
-    
+    grid.setAlignment(Pos.CENTER);
     
     primaryStage.setScene(scene);
     primaryStage.show();
