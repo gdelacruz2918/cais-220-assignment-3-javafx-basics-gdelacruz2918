@@ -28,28 +28,30 @@ public class Exercise14_13 extends Application {
   
   BorderPane pane = new BorderPane();
  
-    Arc arc1 = new Arc(150, 100, 80, 80, 30, 35); // Create an arc
+    Arc arc1 = new Arc(150, 100, 80, 80, 0, 72); // Create an arc
     arc1.setFill(Color.RED); // Set fill color
     arc1.setType(ArcType.ROUND); // Set arc type
     
-    Arc arc2 = new Arc(150, 100, 80, 80, 30 + 90, 35); // Create an arc
-    arc2.setFill(Color.RED); // Set fill color
+    Arc arc2 = new Arc(150, 100, 80, 80, 30 +42, 36); // Create an arc
+    arc2.setFill(Color.BLUE); // Set fill color
     arc2.setType(ArcType.ROUND); // Set arc type
    
-    Arc arc3 = new Arc(150, 100, 80, 80, 30 + 180, 35); // Create an arc
-    arc3.setFill(Color.RED); // Set fill color
+    Arc arc3 = new Arc(150, 100, 80, 80, 30 + 78, 108); // Create an arc
+    arc3.setFill(Color.GREEN); // Set fill color
     arc3.setType(ArcType.ROUND); // Set arc type
   
-    Arc arc4 = new Arc(150, 100, 80, 80, 30 + 270, 35); // Create an arc
-    arc4.setFill(Color.RED); // Set fill color
+    Arc arc4 = new Arc(150, 100, 80, 80, 30 + 186, 144); // Create an arc
+    arc4.setFill(Color.ORANGE); // Set fill color
     arc4.setType(ArcType.ROUND); // Set arc type
    
-    Arc arc5 = new Arc();
-    //-------
     //Create a group and add nodes to the group
     Group group = new Group();
-    group.getChildren().addAll(new Text(210, 40, "arc1: round"), arc1);
-//-------
+    group.getChildren().addAll(new Text(210, 40, "Project"), arc1,
+                               new Text(115, 15, "Quizzes"), arc2,
+                               new Text(20, 100, "MidTerm"), arc3, 
+                               new Text(210, 170, "Final"), arc4); 
+//------------------------------------------------------------------------------
+    
   Scene scene = new Scene(group, 250, 250);
   window.setScene(scene);
   window.setTitle("Pie Chart");
