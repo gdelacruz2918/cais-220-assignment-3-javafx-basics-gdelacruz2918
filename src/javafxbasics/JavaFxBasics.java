@@ -23,7 +23,7 @@ import javafx.stage.Stage;
  */
 public abstract class JavaFxBasics extends Application {
   public static final String CLASSNAME_ARG="--className=";
-  public static final String DEFAULT_CLASSNAME="Exercise14_6";
+  public static final String DEFAULT_CLASSNAME="Exercise14_13";
   
   /**
    * Main method of this application. Takes an optional command line parameter --className=<name>
