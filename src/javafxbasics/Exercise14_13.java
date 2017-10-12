@@ -46,13 +46,13 @@ public class Exercise14_13 extends Application {
    
     //Create a group and add nodes to the group
     Group group = new Group();
-    group.getChildren().addAll(new Text(210, 40, "Project"), arc1,
-                               new Text(115, 15, "Quizzes"), arc2,
-                               new Text(20, 100, "MidTerm"), arc3, 
-                               new Text(210, 170, "Final"), arc4); 
+    group.getChildren().addAll(new Text(210, 40, "Project - 20%"), arc1,
+                               new Text(115, 15, "Quizzes - 10%"), arc2,
+                               new Text(0, 58, "MidTerm - 30%"), arc3, 
+                               new Text(210, 170, "Final - 40%"), arc4); 
 //------------------------------------------------------------------------------
     
-  Scene scene = new Scene(group, 250, 250);
+  Scene scene = new Scene(group, 300, 240);
   window.setScene(scene);
   window.setTitle("Pie Chart");
   window.show();
