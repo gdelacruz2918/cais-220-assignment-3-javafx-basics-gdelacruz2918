@@ -7,6 +7,11 @@
 package javafxbasics;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 /**
@@ -17,7 +22,18 @@ public class Exercise14_26 extends Application {
 
   @Override
   public void start(Stage primaryStage) throws Exception {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      Stage window = primaryStage;
+      window.setTitle("Clock Pane");
+      
+      GridPane pane = new GridPane();
+      pane.setPadding(new Insets(10,10,10,10));
+      pane.setHgap(10);
+      pane.setAlignment(Pos.CENTER);
+      
+      
+      HBox hbox = new HBox(pane);
+      Scene scene = new Scene(hbox, 300, 300);
+      window.setScene(scene);
+      window.show();
   }
-
 }
